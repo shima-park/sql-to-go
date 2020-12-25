@@ -1,6 +1,10 @@
 # sql-to-go
 Database create table statement is converted to go struct
 
+Translates JSON into a Go type definition. [json-to-go](https://mholt.github.io/json-to-go/)
+ 
+Converts curl commands to Go code. [curl-to-go](https://mholt.github.io/curl-to-go/)
+
 # How to installation
 ```
     go install github.com/shima-park/sql-to-go/cmd/sql2go
