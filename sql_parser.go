@@ -66,6 +66,7 @@ type columnVisitor struct {
 
 func (v *columnVisitor) Enter(in ast.Node) (ast.Node, bool) {
 	if s, ok := in.(*ast.CreateTableStmt); ok {
+		v.newStruct.TableName = s.Table.Name.O
 		v.newStruct.Name = v.config.StructNameMap(s.Table.Name.O)
 
 		for _, col := range s.Cols {

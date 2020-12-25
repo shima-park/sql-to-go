@@ -18,6 +18,10 @@ type {{.Struct.Name}} struct{
     {{range $index, $field := .Struct.Fields}} {{$field.Name}} {{$field.Type}} {{$field.Tag}} // {{$field.Comment}}
     {{end}}
 }
+
+func ({{.Struct.Name}}) TableName() string {
+    return "{{.Struct.TableName}}"
+}
     `,
 }
 

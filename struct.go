@@ -1,8 +1,9 @@
 package sql_to_go
 
 type Struct struct {
-	Name   string
-	Fields []Field
+	TableName string
+	Name      string
+	Fields    []Field
 }
 
 type Field struct {
